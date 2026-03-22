@@ -1,0 +1,9 @@
+# Arduino temp
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+/build/
+
+# Secrets
+secrets.h
