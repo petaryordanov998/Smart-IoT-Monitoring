@@ -23,7 +23,7 @@ DHT dht(DHTPIN, DHTTYPE);
 #define LDR_PIN 34
 #define PIR_PIN 5
 
-#define DARK_THRESHOLD 500
+#define DARK_THRESHOLD 1200
 
 // -------- Mode --------
 enum Mode {HOME, AWAY};
@@ -188,7 +188,8 @@ void setup() {
     delay(500);
     Serial.print(".");
   }
-  Serial.println("\nWiFi connected: " + WiFi.localIP());
+  Serial.print("\nWiFi connected: ");
+  Serial.println(WiFi.localIP());
 
   client.setInsecure(); // Telegram SSL
 
